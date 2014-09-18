@@ -19,9 +19,12 @@
 # limitations under the License.
 #
 
-chef_gem "rinruby"
-r_package "ggplot2"
 
-# package 'ggplot2' do
-#   action :install
-# end
+# List packages required
+r_packages = ["ggplot2", "dplyr", "tidyr"]
+# Install them
+r_packages.each do |cran_package|
+    r_package cran_package do
+        action :install
+    end
+end
