@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-chef_gem "rinruby"
+# chef_gem "rinruby"
 
 # Packages defined in roles/r.rb
 # Install them
