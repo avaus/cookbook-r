@@ -19,12 +19,21 @@
 # limitations under the License.
 #
 
+chef_gem "rinruby"
 
-# List packages required
-r_packages = ["ggplot2", "dplyr", "tidyr"]
+# Packages defined in roles/r.rb
 # Install them
-r_packages.each do |cran_package|
+node['r']['r-packages'].each do |cran_package|
     r_package cran_package do
         action :install
     end
 end
+
+# # List packages required
+# r_packages = ["ggplot2"]
+# # Install them
+# r_packages.each do |cran_package|
+#     r_package cran_package do
+#         action :install
+#     end
+# end

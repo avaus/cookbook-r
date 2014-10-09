@@ -33,3 +33,6 @@ else
 end
 
 default['r']['install_dev'] = true
+
+# For installing R packages
+default['r']['r-packages'] = []
